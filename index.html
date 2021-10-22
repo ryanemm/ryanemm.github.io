@@ -23,17 +23,99 @@
   <meta name="apple-mobile-web-app-title" content="my_portfolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
   
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!--<link rel="stylesheet" type="text/css" href="styles.css"> -->
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>my_portfolio</title>
   <link rel="manifest" href="manifest.json">
+
+    <style>
+    .loader_wrapper {
+        position: fixed;
+        background-color: #282828;
+		top: 0;   
+		left: 0;
+        justify-content: center;
+        align-items: center;
+		width: 100%;
+		height: 100%;
+	    
+    }
+    
+    .loader {
+        display: block;
+    	position: relative;
+    	left: 50%;
+    	top: 50%;
+         
+    	width: 150px;
+    	height: 150px;
+    	margin: -75px 0 0 -75px;	
+    	border: 3px solid transparent;
+    	border-top-color: #0000FF;
+    	border-radius: 50%;		
+    	-webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+,   Safari 5+ */
+        animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+		
+	}
+
+    .loader_before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border: 3px solid transparent;
+		border-top-color: #FFFFFF;
+		border-radius: 50%;
+		-webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+      
+	}
+
+    .loader_after {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		border: 3px solid transparent;
+		border-top-color: #A95AEC;
+		border-radius: 50%;
+		-webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+	}
+    
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    </style>
 </head>
 <body>
-	<div class="center">
-	<div class="loader">Loading...</div>
+	<div class ="loader_wrapper">
+	        <div class = "loader">
+                <div class = "loader_before">
+                    <div class = "loader_after"></div>
+                </div>
+            </div>
 	</div>
 	
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -42,10 +124,11 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=4090549142');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2846443095');
       });
     }
   </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+  <script src="main.dart.js" type="application/javascript"
+        onendload="document.getElementById('loader').remove();"></script>
 </body>
 </html>

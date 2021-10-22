@@ -62102,10 +62102,11 @@ m=T.oV(k,k,C.aV,!0,k,Q.cD(H.b([Q.cD(k,k,"RYAN"),Q.cD(k,B.e0(C.i,70,C.am)," EMASO
 o=T.a5(k,20,k)
 q=B.aD(C.i,28,C.a6)
 q=M.a0(k,T.i1(C.aZ,H.b([l,T.dz(H.b([T.cb(H.b([p,m,o,T.oV(k,k,C.aV,!0,k,Q.cD(H.b([Q.cD(k,k,"Web, Mobile"),Q.cD(k,B.aD(C.i,40,C.a6)," &"),Q.cD(k,k," Desktop. Building it all with Flutter.")],n),q,k),C.a1,k,k,1,C.ak)],r),C.x,C.a0,C.v)],r),C.x,C.a0,C.v)],r),C.aU),k,k,k,k,k,k)
-n=T.a5(k,90,k)
+n=T.a5(k,50,k)
 o=C.r.h(0,900)
 o.toString
-return M.a0(k,K.p4(M.a0(C.aB,T.cb(H.b([s,q,n,N.abV(C.y,C.i,C.i,20,40,P.a_(102,156,39,176),"PROJECTS",o),T.a5(k,70,k),L.iJ(C.pF,C.i,50),T.a5(k,50,k),T.dV(new Z.zW(k),k,k)],r),C.x,C.d8,C.v),k,new S.aA(k,k,k,k,k,new T.di(C.fi,C.fh,C.ae,h,k,k),C.m),k,k,new V.S(40,40,60,50),j.a.a),10,new D.iz(C.c7,C.cU,new D.hz(0.06981317007977318))),i,k,k,k,new V.S(0,0,0,50),k)}}
+m=C.r.h(0,800).a
+return M.a0(k,K.p4(M.a0(C.aB,T.cb(H.b([s,q,n,N.abV(C.y,C.i,C.i,20,40,P.a_(102,m>>>16&255,m>>>8&255,m&255),"PROJECTS",o),T.a5(k,70,k),L.iJ(C.pF,C.i,50),T.a5(k,50,k),T.dV(new Z.zW(k),k,k)],r),C.x,C.d8,C.v),k,new S.aA(k,k,k,k,k,new T.di(C.fi,C.fh,C.ae,h,k,k),C.m),k,k,new V.S(40,40,60,50),j.a.a),10,new D.iz(C.c7,C.cU,new D.hz(0.06981317007977318))),i,k,k,k,new V.S(0,0,0,50),k)}}
 F.QT.prototype={
 $0:function(){},
 $S:0}
