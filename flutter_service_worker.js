@@ -3,12 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "ad3d3dfe91418c360255c004b541208e",
+  "main.dart.js": "5860cbab3c015d4c3cb136bbf11b1ce6",
+"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
+"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "f10fb156d8557ee167259c256e0de0f2",
-"/": "f10fb156d8557ee167259c256e0de0f2",
-"assets/AssetManifest.json": "e734221625fe6b153fbc09d07abaf22f",
+"index.html": "964a0d4bcbc025e8dcc8553fa608addb",
+"/": "964a0d4bcbc025e8dcc8553fa608addb",
+"assets/AssetManifest.json": "66f6baf5ee30e69502730bc42f60bd3b",
 "assets/assets/images/web_dev_graphic.png": "96c7c97e5aa784024a2e0bfc4519cdbf",
 "assets/assets/images/web_dev_fill.png": "562e597356f84f06c02098876c1469bd",
 "assets/assets/images/cover_2.jpg": "5bff6330479aed404c38ef55e0ee9a5e",
@@ -21,6 +23,7 @@ const RESOURCES = {
 "assets/assets/images/finger.jpg": "d8130d43c801c0302cef49d7719df0c5",
 "assets/assets/images/mobile_dev_fill_1.png": "0393b3533ffff62a2c66c44a5f48f7ae",
 "assets/assets/images/custom_software_1.png": "ad2539e804871f98ada26f07ee43b630",
+"assets/assets/images/header_phone_black.png": "41a823f6e87fe805b125704ae9742378",
 "assets/assets/images/web_dev_fill_1.png": "4974a68c6c4b682f09f13db264df2935",
 "assets/assets/images/ellie_writes_2.png": "19d5d137f0b373c77ea3db8333ff702a",
 "assets/assets/images/logos/php.png": "310403ec394e8cfe308af0e16af9db38",
@@ -35,6 +38,7 @@ const RESOURCES = {
 "assets/assets/images/logos/line.png": "6135730ee7e1e8016fe035acafd5d35b",
 "assets/assets/images/logos/my_logo.png": "193f1b6991435012239a041722f42cfc",
 "assets/assets/images/logos/twitter.png": "47cce776d46ebcab12724be3e319017d",
+"assets/assets/images/header_phone_white.png": "e925b492a3feaa8c5af4f1d2e92dcd25",
 "assets/assets/images/demo.gif": "99076a7d927229fb239ffab57b13dd26",
 "assets/assets/images/web_dev_outline.png": "48dbd0d8275f10f2ecd3e6d45c4f5133",
 "assets/assets/images/phone_1.jpg": "8619b14526012368c72a8913a5a52910",
@@ -48,11 +52,9 @@ const RESOURCES = {
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/NOTICES": "5551236cd54d9c99dd6b80e5fa0329b5",
-"images/title_text.png": "94a81ded3651f120bff7fe6da2361379",
-"manifest.json": "60091747cc42c4f25033351cba54fc65",
+"assets/NOTICES": "b990da672411b0eb084728d175bd5e97",
+"manifest.json": "e2b9103aaafaf8ed9f90576c9d9a1341",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"styles.css": "e191a1eab21983553aa787e89da3e18b",
 "version.json": "aaafa928a4f8616604eca12d830fe765"
 };
 
