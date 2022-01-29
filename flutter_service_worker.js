@@ -5,10 +5,11 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"index.html": "e3a08e1e9beea746458fba3367f60711",
-"/": "e3a08e1e9beea746458fba3367f60711",
+"index.html": "75d4791d7eb89fb63940c4f2ecae9d9f",
+"/": "75d4791d7eb89fb63940c4f2ecae9d9f",
 "version.json": "4ce2f20aab3a169b910e0d548d595f9c",
 "assets/AssetManifest.json": "b9501afed1c7cca14d3edfa8a2d1495d",
+"assets/kosi_connect_logo.png": "272bd72b18d32012a73dea4d80675f1a",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/assets/images/sign_2.png": "4dc695fe5a953deae41aea52255d3127",
 "assets/assets/images/company_logo_hero.png": "66143025c5b12bab9888bc6fe6504d78",
@@ -53,6 +54,7 @@ const RESOURCES = {
 "assets/assets/images/mobile_dev_outline.png": "b7665404ec04dbe1f269fafac2c793d2",
 "assets/assets/images/process_infographic_mobile.jpg": "913a9e3edf8859b57155a8947c52df5c",
 "assets/assets/images/finger.jpg": "d8130d43c801c0302cef49d7719df0c5",
+"assets/assets/images/kosi_connect_logo.png": "272bd72b18d32012a73dea4d80675f1a",
 "assets/assets/images/web_dev_fill_1.png": "9097c7cebd5e1f7bb3dc6f6d534570e3",
 "assets/assets/images/phone_1.jpg": "8619b14526012368c72a8913a5a52910",
 "assets/assets/images/nelspruit_mobile.jpg": "e3a2732f5fa0e5b63049487b2ef9e7c1",
@@ -76,7 +78,7 @@ const RESOURCES = {
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/NOTICES": "0615fabf3ed88e6acbc4452d257e78de",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"main.dart.js": "ed914ca744ca3286557e5629f2b134ea",
+"main.dart.js": "ec37b3b77ab7115ea0ffea359af8a2fa",
 "manifest.json": "2de99ccc797eb8b03d271436928b2e6e",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796"
 };

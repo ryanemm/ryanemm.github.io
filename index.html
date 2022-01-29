@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -23,18 +24,68 @@
   <meta name="apple-mobile-web-app-title" content="kosi_connect">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>kosi_connect</title>
+  <style type="text/css">
+    .logo {
+      width: 231px;
+      height: 70px;
+    }
+
+    .loading-scr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    .load-bar {
+      width: 300px;
+      height: 4px;
+      position: relative;
+      overflow: hidden;
+      background: #cfcfcf;
+      margin-top: 22px;
+    }
+
+    .load-bar::before {
+      content: "";
+      width: 200px;
+      height: 4px;
+      position: absolute;
+      left: -150px;
+      background: #003049;
+      animation: loadBar 1.5s infinite ease;
+    }
+
+    /*-- load bar animation CSS--*/
+    @keyframes loadBar {
+      50% {
+        left: 100px;
+      }
+    }
+  </style>
+
+  <title>Kosi Connect</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
-	<div id="loader-wrapper">
-		<div id="loader"></div>
-	</div>
+  <div class="loading-scr">
+    <div class="loading-animation">
+      <img src="./assets/kosi_connect_logo.png" alt="Kosi Connect logo" class="logo" />
+      <div class="load-bar"></div>
+    </div>
+  </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '949624412';
+    var serviceWorkerVersion = '3678291917';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -98,4 +149,5 @@
     }
   </script>
 </body>
+
 </html>
