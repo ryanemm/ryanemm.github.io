@@ -26,8 +26,8 @@
 
   <style type="text/css">
     .logo {
-      width: 231px;
-      height: 70px;
+      width: 173px;
+      height: 52px;
     }
 
     .loading-scr {
@@ -44,8 +44,8 @@
     }
 
     .load-bar {
-      width: 300px;
-      height: 4px;
+      width: 225px;
+      height: 3px;
       position: relative;
       overflow: hidden;
       background: #cfcfcf;
@@ -54,10 +54,10 @@
 
     .load-bar::before {
       content: "";
-      width: 200px;
-      height: 4px;
+      width: 150px;
+      height: 3px;
       position: absolute;
-      left: -150px;
+      left: -112px;
       background: #003049;
       animation: loadBar 1.5s infinite ease;
     }
@@ -85,7 +85,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '3678291917';
+    var serviceWorkerVersion = '2210872629';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
