@@ -5,8 +5,8 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"index.html": "8fd6c5371055d6cf2ff32d4edc1bd601",
-"/": "8fd6c5371055d6cf2ff32d4edc1bd601",
+"index.html": "c629893f43636a63b25361c36bd5b01c",
+"/": "c629893f43636a63b25361c36bd5b01c",
 "version.json": "4ce2f20aab3a169b910e0d548d595f9c",
 "assets/AssetManifest.json": "b26af0d4ea2effc2ce41538e2e654462",
 "assets/kosi_connect_logo.png": "272bd72b18d32012a73dea4d80675f1a",
@@ -82,7 +82,7 @@ const RESOURCES = {
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/NOTICES": "31bf71237c5a460e94a8388e12685286",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"main.dart.js": "bcf973e77746e0c55adc24f331226bf8",
+"main.dart.js": "6d154db3257216fb1d7fc30fe5c8f73e",
 "manifest.json": "2de99ccc797eb8b03d271436928b2e6e",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796"
 };
