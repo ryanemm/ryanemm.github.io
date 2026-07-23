@@ -2,6 +2,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(({ isIntersecting, target }) => {
     if (isIntersecting) target.classList.add('revealed')
   })
-}, { threshold: .12 })
+}, { threshold: 0.12 })
 
-document.querySelectorAll('.project, .section-intro, .about-grid, .contact').forEach(el => observer.observe(el))
+document.querySelectorAll('.case, .section-head, .now-grid, .about, .contact').forEach((element) => observer.observe(element))
