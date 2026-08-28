@@ -10,13 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="verinote.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <script>
+    document.documentElement.classList.add('anim');
+    // safety net: if the motion script fails to load, reveal everything anyway
+    setTimeout(function(){ document.documentElement.classList.add('anim-fallback'); }, 2600);
+  </script>
 </head>
 <body>
   <div class="noise"></div>
-  <nav class="nav shell">
-    <a class="brand" href="#home" aria-label="Ryan Emason home"><span>RE</span><i></i></a>
-    <div class="nav-links"><a href="#work">Work</a><a href="#now">Now</a><a href="#about">About</a></div>
-    <a class="nav-contact" href="mailto:hello@ryanemm.tech">Let’s talk <span>↗</span></a>
+  <nav class="nav">
+    <div class="nav-inner shell">
+      <a class="brand" href="#home" aria-label="Ryan Emason home"><span>RE</span><i></i></a>
+      <div class="nav-links"><a href="#work">Work</a><a href="#now">Now</a><a href="#about">About</a></div>
+      <a class="nav-contact" href="mailto:hello@ryanemm.tech">Let’s talk <span>↗</span></a>
+    </div>
   </nav>
 
   <main id="home">
