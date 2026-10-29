@@ -3,67 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Full-stack developer & data scientist building useful software and intelligent products." />
-  <title>Ryan Emason — Full-stack developer & data scientist</title>
+  <meta name="description" content="Ryan Emason — full-stack engineer building production software for mining, healthcare and industrial clients." />
+  <title>Ryan Emason — Full-stack engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="verinote.css" />
-  <link rel="stylesheet" href="animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=13" />
   <script>
-    document.documentElement.classList.add('anim');
-    // safety net: if the motion script fails to load, reveal everything anyway
-    setTimeout(function(){ document.documentElement.classList.add('anim-fallback'); }, 2600);
+    (function () {
+      var root = document.documentElement
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      root.classList.add('motion')
+      // the splash plays once per browser session
+      try { if (!sessionStorage.getItem('re-splash')) root.classList.add('splashing') } catch (e) {}
+      // safety net: if script.js never runs, show everything instead of a blank page
+      setTimeout(function () { if (!window.__motionReady) root.classList.remove('motion', 'splashing') }, 2500)
+    })()
   </script>
 </head>
 <body>
-  <div class="noise"></div>
-  <nav class="nav">
-    <div class="nav-inner shell">
-      <a class="brand" href="#home" aria-label="Ryan Emason home"><span>RE</span><i></i></a>
-      <div class="nav-links"><a href="#work">Work</a><a href="#now">Now</a><a href="#about">About</a></div>
-      <a class="nav-contact" href="mailto:hello@ryanemm.tech">Let’s talk <span>↗</span></a>
+  <div class="splash" aria-hidden="true">
+    <div class="splash-inner">
+      <p class="splash-name">Ryan Emason</p>
+      <svg class="scribble" viewBox="0 0 240 18" preserveAspectRatio="none"><path pathLength="1" d="M3 11c50-6 110-8 160-5 28 1 52 2 74-2"/></svg>
+      <p class="splash-sub">I build software that works where the work happens.</p>
     </div>
-  </nav>
+    <p class="splash-hint">Tap anywhere to skip</p>
+  </div>
 
-  <main id="home">
+  <a class="skip" href="#top">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav-inner shell">
+      <a class="brand" href="#top" aria-label="Ryan Emason, home"><span>RE</span><i></i></a>
+      <nav class="nav-links" aria-label="Sections"><a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+      <a class="btn btn-ink btn-sm" href="mailto:hello@ryanemm.tech">Let’s talk</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ hero ============ -->
     <section class="hero shell">
-      <div class="hero-top"><p class="eyebrow">RYAN EMASON / PORTFOLIO 2026</p><p class="location"><i></i> BUILDING FOR EVERYONE, ALL OVER THE GLOBE</p></div>
-      <div class="hero-copy">
-        <h1>Software with<br><em>good instincts.</em></h1>
-        <div class="intro"><p>Full-stack developer & data scientist. I build thoughtful digital products, turning complicated work into products people can actually use.</p><a class="circle-link" href="#work" aria-label="See selected work">↓</a></div>
+      <div>
+        <p class="label label--name" data-reveal><b>Ryan Emason</b> <span>Full&#8209;stack engineer</span></p>
+        <h1 data-type>I build software that works <em><mark>where the work happens.</mark></em></h1>
+        <p class="lede" data-ink style="--delay:.9s">Five-plus years building production software for mining, healthcare and industrial clients — React and TypeScript up front, Python, Node.js and PostgreSQL underneath.</p>
+        <div class="hero-actions" data-reveal style="--delay:1.4s">
+          <a class="btn btn-ink" href="#work">View my work</a>
+          <a class="btn btn-line" href="resume.pdf" download="Ryan-Emason-Resume.pdf">Download résumé <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
-      <div class="hero-panel">
-        <div class="panel-badge">FULL-STACK / DATA SCIENCE</div>
-        <div class="panel-orbit orbit-one"></div><div class="panel-orbit orbit-two"></div><div class="panel-orbit orbit-three"></div>
-        <div class="panel-center"><span>01</span><strong>MAKE IT<br>USEFUL</strong><small>  MAKE IT<br>INTELLIGENT</small></div>
-        <div class="panel-footer"><span>PYTHON · TYPESCRIPT · REACT · SQL</span><span>SCROLL TO EXPLORE ↓</span></div>
+
+      <aside class="intro" data-reveal style="--delay:.5s" aria-label="About Ryan in brief">
+        <dl>
+          <div><dt>Based in</dt><dd>eMalahleni, South Africa</dd></div>
+          <div>
+            <dt>Education</dt>
+            <dd><b>BSc (Hons) Data Science</b><span>Eduvos · In progress</span><b>BSc Biotechnology</b><span>Eduvos · Completed</span></dd>
+          </div>
+          <div>
+            <dt>Contact</dt>
+            <dd><a href="mailto:hello@ryanemm.tech">hello@ryanemm.tech</a><a href="https://wa.me/27674930181" target="_blank" rel="noreferrer">WhatsApp +27 67 493 0181</a></dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- ============ work ============ -->
+    <section class="section shell" id="work">
+      <header class="sec-head">
+        <p class="label" data-reveal><span><span class="no">01</span> · Work</span></p>
+        <h2 data-type>Featured projects</h2>
+        <svg class="scribble" viewBox="0 0 240 18" aria-hidden="true" data-draw style="--delay:.8s"><path pathLength="1" d="M3 12c40-6 92-9 140-7 34 1 64 3 94-2"/></svg>
+        <p data-ink>Things I’ve built, shipped and kept running — in people’s hands, not just in a repo.</p>
+      </header>
+
+      <article class="project project--getlocals" data-reveal>
+        <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
+        <div class="project-copy">
+          <span class="project-no">01</span>
+          <h3 data-type>GetLocals</h3>
+          <p class="project-kind">Mobile marketplace</p>
+          <p class="desc" data-ink>A cross-platform app connecting mining and construction employers with local job seekers, matched by distance and job type.</p>
+          <dl class="facts-row">
+            <div><dt>My role</dt><dd>Full&#8209;stack developer</dd></div>
+            <div><dt>Built with</dt><dd>Flutter · Laravel · MySQL</dd></div>
+          </dl>
+          <p class="avail">Available on</p>
+          <div class="stores">
+            <a class="store" href="https://apps.apple.com/za/app/get-locals/id6624294276" target="_blank" rel="noreferrer"><svg class="store-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.getlocals.app" target="_blank" rel="noreferrer"><svg class="store-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#2196f3" d="M3.6 1.6 13.6 12 3.6 22.4z"/><path fill="#34a853" d="M3.6 1.6l13.6 8.13L13.6 12z"/><path fill="#ea4335" d="M3.6 22.4 13.6 12l3.6 2.27z"/><path fill="#fbbc04" d="M17.2 9.73 21 12l-3.8 2.27L13.6 12z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+          </div>
+        </div>
+        <div class="stack stack--phones" data-stack>
+          <p class="annot" data-write style="--delay:1.7s" aria-hidden="true"><span>Post a job</span><span>in a few taps</span></p>
+          <svg class="annot-arrow" viewBox="0 0 96 80" aria-hidden="true" data-draw style="--delay:3.4s"><path pathLength="1" d="M86 6C62 12 34 30 18 66"/><path pathLength="1" d="M8 52l10 16 16-10"/></svg>
+          <img class="stack-back" src="img/getlocals-back.png" alt="GetLocals employer dashboard showing listings and applications" loading="lazy" width="716" height="1192" />
+          <img class="stack-front" src="img/getlocals-front.png" alt="GetLocals new job listing form" loading="lazy" width="560" height="1130" />
+        </div>
+      </article>
+
+      <article class="project project--verinote project--flip" data-reveal>
+        <span class="tape tape--tl tape--orange" aria-hidden="true"></span><span class="tape tape--tr tape--orange" aria-hidden="true"></span>
+        <div class="project-copy">
+          <span class="project-no">02</span>
+          <h3 data-type>VeriNote</h3>
+          <p class="project-kind">Healthcare platform</p>
+          <p class="desc" data-ink>Fights medical-note fraud by issuing tamper-evident digital notes that trace back to a verified practitioner — handling sensitive records the POPIA-compliant way.</p>
+          <dl class="facts-row">
+            <div><dt>My role</dt><dd>Co&#8209;founder · Full&#8209;stack</dd></div>
+            <div><dt>Focus</dt><dd>Verification · Subscriptions</dd></div>
+          </dl>
+          <p class="avail">On the web, iOS and Android</p>
+          <div class="stores">
+            <a class="store" href="https://verinote.co.za" target="_blank" rel="noreferrer"><span><small>Visit</small><b>verinote.co.za ↗</b></span></a>
+          </div>
+        </div>
+        <div class="stack stack--web" data-stack>
+          <p class="annot" data-write style="--delay:1.7s" aria-hidden="true"><span>Every note traced to</span><span>a real practitioner</span></p>
+          <svg class="annot-arrow" viewBox="0 0 96 80" aria-hidden="true" data-draw style="--delay:3.4s"><path pathLength="1" d="M86 6C62 12 34 30 18 66"/><path pathLength="1" d="M8 52l10 16 16-10"/></svg>
+          <div class="note-card stack-back" aria-hidden="true">
+            <span class="chip">✓ Verified note</span>
+            <i></i><i></i><i></i>
+            <dl><div><dt>Practitioner</dt><dd>Verified</dd></div><div><dt>Reference</dt><dd>Matches</dd></div></dl>
+          </div>
+          <figure class="browser stack-front">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>verinote.co.za</span></div>
+            <img src="img/verinote-web.jpg" alt="VeriNote landing page: Verified medical notes. Zero doubt." loading="lazy" width="1600" height="827" />
+          </figure>
+        </div>
+      </article>
+
+      <div class="more">
+        <p class="label">Also in the notebook</p>
+        <article class="mini mini--left" data-reveal>
+          <span class="tape" aria-hidden="true"></span>
+          <h3>Shayile Time</h3>
+          <p class="by">Big Eye Minerals and Energy</p>
+          <p>Attendance, payroll and safety compliance for mining operations — RFID clock-in on Android, a Flutter field app and a PHP/MySQL backend with role-based access.</p>
+          <div class="tags"><span>RFID</span><span>Flutter</span><span>PHP · MySQL</span><span>Compliance</span></div>
+          <a class="text-link" href="https://shayiletime.co.za" target="_blank" rel="noreferrer">shayiletime.co.za ↗</a>
+        </article>
+        <article class="mini mini--right" data-reveal style="--delay:.12s">
+          <span class="tape tape--tr tape--orange" aria-hidden="true"></span>
+          <h3>Fleet Tracking</h3>
+          <p class="by">Kosi Connect</p>
+          <p>Live location, trip history and speed data from a GPS/GSM tracker built on an STM microcontroller, served by Azure Functions and PostgreSQL to Angular and Flutter clients.</p>
+          <div class="tags"><span>STM · GPS/GSM</span><span>Azure</span><span>PostgreSQL</span><span>Angular</span></div>
+        </article>
       </div>
     </section>
 
-    <section class="statement"><div class="shell"><p>Shipping <b>real-world software,</b> solving real problems with <em>data products that matter.</em></p></div></section>
-
-    <section class="work shell" id="work">
-      <header class="section-head"><div><p class="eyebrow">01 / LIVE PRODUCTS</p><h2>Built. Shipped.<br><em>In people’s hands.</em></h2></div><p>My recent work has been product-focused: software that meets people where they are, solves a real workflow, and earns its place in the day.</p></header>
-      <div class="case-grid">
-        <article class="case case-mobile">
-          <div class="case-visual mobile-visual"><div class="mobile-window"><img src="get_locals_snap.png" alt="GetLocals mobile app screen" /></div><span class="platform-label">LIVE ON<br>IOS + ANDROID</span></div>
-          <div class="case-body"><div><p class="case-type">MOBILE PRODUCT · FULL-STACK</p><h3>GetLocals</h3><p>A cross-platform mobile app that connects employers and local job seekers in the mining and construction industries.</p></div><div class="case-actions"><a href="https://apps.apple.com/za/app/get-locals/id6624294276" target="_blank" rel="noreferrer">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.getlocals.app" target="_blank" rel="noreferrer">Google Play ↗</a></div></div>
-        </article>
-        <article class="case case-medical">
-          <div class="case-visual medical-visual"><div class="records-window"><img src="verinote_snap.png" alt="VeriNote medical documentation platform dashboard" /></div><span class="secure-label">● SECURE SYSTEM / LIVE</span></div>
-          <div class="case-body"><div><p class="case-type">HEALTHCARE SYSTEM · FULL-STACK</p><h3>VeriNote</h3><p>Medical documentation platform that combats medical document fraud by generating digital notes that cannot be tampered with or forged, with a traceable source from verified medical practitioners.</p></div><div class="case-actions"><a href="https://verinote.co.za" target="_blank" rel="noreferrer">View platform ↗</a></div></div>
-        </article>
+    <!-- ============ about ============ -->
+    <section class="section shell about" id="about">
+      <div>
+        <p class="label" data-reveal><span><span class="no">02</span> · About</span></p>
+        <h2 data-type>A builder first. A curious analyst <em><mark>always.</mark></em></h2>
+        <div class="sticky" data-reveal style="--delay:.3s">
+          <span class="tape tape--orange" aria-hidden="true"></span>
+          <p data-write style="--delay:1s"><span><b>Now:</b> BSc (Hons) Data</span><span>Science at Eduvos + two</span><span>data projects in the works</span></p>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p data-ink>I’m Ryan — a full-stack developer and director at Kosi Connect, building web and mobile products end to end since 2020. I care about the detail that makes software feel considered, from the data model underneath to the screen someone taps in the field.</p>
+        <p data-ink>I pick up unfamiliar, regulated domains quickly — a habit from a biotechnology degree and years of building for mining, healthcare and industrial clients. Now I’m bringing that same curiosity to data science.</p>
+        <div class="toolbox" data-reveal hidden>
+          <span class="tape tape--tr" aria-hidden="true"></span>
+          <p class="label">The toolbox</p>
+          <dl data-skills></dl>
+        </div>
       </div>
     </section>
 
-    <section class="now" id="now"><div class="shell now-grid"><p class="eyebrow">02 / DATA</p><div><h2>Data science, <em>applied.</em></h2><p>I build data science projects that connect analytical depth with real product experiences.</p><div class="now-tags"><span>Data analysis</span><span>Machine learning</span><span>Applied AI</span><span>Data visualisation</span></div></div><div class="now-count"><span>NOW</span><strong>02</strong><small>DATA PROJECTS<br>IN DEVELOPMENT</small></div></div></section>
+    <!-- ============ experience ============ -->
+    <section class="section shell" id="experience">
+      <header class="exp-head">
+        <div>
+          <p class="label" data-reveal><span><span class="no">03</span> · Experience</span></p>
+          <h2 data-type>Pick a year, <em><mark>plug it in.</mark></em></h2>
+        </div>
+        <div class="actions" data-reveal>
+          <a class="btn btn-ink btn-sm" href="resume.pdf" download="Ryan-Emason-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="resume.html" target="_blank" rel="noreferrer">Full résumé ↗</a>
+        </div>
+      </header>
 
-    <section class="about shell" id="about"><div class="about-label"><p class="eyebrow">03 / ABOUT</p><div class="monogram"><span>R</span><span>E</span></div></div><div class="about-copy"><h2>A builder first.<br>A curious analyst<br><em>always.</em></h2><p>I’m Ryan Emason — a full-stack developer with an eye for the detail that makes software feel considered. I enjoy working across the stack, from the logic and data beneath a product to the interfaces people come back to.</p><p>Currently bringing that product mindset into data science: finding useful patterns, asking better questions, and building tools that make the answers easy to act on.</p><div class="skill-list"><span>Full-stack development</span><span>Product thinking</span><span>Python & SQL</span><span>Data science</span></div></div></section>
+      <div class="timeline" data-timeline data-reveal>
+        <span class="tape tape--tl tape--orange" aria-hidden="true"></span><span class="tape tape--tr tape--orange" aria-hidden="true"></span>
+        <div class="track">
+          <div class="rail"></div>
+          <div class="plug" aria-hidden="true"><span class="cable"></span><span class="boot"></span><span class="body"></span><span class="tip"></span></div>
+          <div class="stops" role="tablist" aria-label="Experience by year"></div>
+        </div>
+        <div class="stop-panel" role="tabpanel" tabindex="0"></div>
+        <div class="exp-foot">
+          <button class="show-all" type="button" aria-expanded="false" aria-controls="full-list">Show the whole list ›</button>
+          <ol class="full-list" id="full-list" hidden></ol>
+        </div>
+      </div>
+    </section>
 
-    <section class="contact"><div class="shell"><p class="eyebrow">04 / GET IN TOUCH</p><h2>Have something worth<br><em>building?</em></h2><a class="email" href="mailto:hello@ryanemm.tech">hello@ryanemm.tech <span>↗</span></a><footer><span>© 2026 RYAN EMASON</span><div><a href="https://www.linkedin.com/in/ryan-emason-678571213" target="_blank" rel="noreferrer">LinkedIn</a></div><a href="#home">BACK TO TOP ↑</a></footer></div></section>
+    <!-- ============ contact ============ -->
+    <section class="contact shell" id="contact">
+      <p class="label" data-reveal><span><span class="no">04</span> · Get in touch</span></p>
+      <h2 data-type>Have something worth <em><mark>building?</mark></em></h2>
+      <a class="email" href="mailto:hello@ryanemm.tech" data-reveal style="--delay:.6s">hello@ryanemm.tech <span aria-hidden="true">↗</span>
+        <svg class="scribble" viewBox="0 0 240 18" preserveAspectRatio="none" aria-hidden="true" data-draw style="--delay:1.2s"><path pathLength="1" d="M3 11c50-5 110-7 160-5 28 1 52 2 74-1"/></svg>
+      </a>
+      <p class="hand signoff" data-write style="--delay:.4s" aria-hidden="true"><span>— Ryan</span></p>
+
+      <footer>
+        <span>© 2026 Ryan Emason</span>
+        <nav aria-label="Elsewhere">
+          <a href="https://www.linkedin.com/in/ryan-emason-678571213" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/ryanemm" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="resume.pdf" download="Ryan-Emason-Resume.pdf">Résumé</a>
+        </nav>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </section>
   </main>
-  <script src="script.js"></script>
+
+  <script src="resume.js?v=3"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

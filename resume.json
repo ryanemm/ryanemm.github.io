@@ -1,0 +1,238 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ryan Tatenda Emason",
+    "label": "Full-Stack Software Engineer — SaaS Platforms, Payments & Data",
+    "email": "ryantemason@gmail.com",
+    "phone": "+27 77 371 2759",
+    "url": "https://ryanemm.tech",
+    "summary": "Full-stack engineer with 5+ years building and shipping production software for regulated, multi-organisation environments. I work across React and TypeScript on the frontend, Python and Node.js on the backend, and PostgreSQL underneath, deploying containerised services with Docker to cloud and self-managed Linux infrastructure. Recent work spans payment gateway integration, subscription and access-control systems, and POPIA-compliant handling of sensitive records. I learn unfamiliar regulated domains quickly — a habit from a biotechnology background and five years building for mining, healthcare and industrial clients.",
+    "location": {
+      "city": "eMalahleni",
+      "region": "Mpumalanga",
+      "countryCode": "ZA"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ryan-emason-678571213",
+        "url": "https://www.linkedin.com/in/ryan-emason-678571213"
+      },
+      {
+        "network": "GitHub",
+        "username": "ryanemm",
+        "url": "https://github.com/ryanemm"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Kosi Connect (Pty) Ltd",
+      "position": "Full-Stack Developer / Director",
+      "url": "https://kosiconnect.co.za",
+      "location": "eMalahleni, South Africa",
+      "startDate": "2020-01",
+      "summary": "Design, build and deploy full-stack web and mobile products end to end for clients across mining, healthcare and industrial sectors — owning architecture, delivery and production support.",
+      "highlights": [
+        "Build frontend interfaces in React.js, TypeScript (Angular) and Flutter, with a focus on interfaces non-technical users in the field can operate without training.",
+        "Design and build RESTful APIs and backend services in Python, Node.js and PHP, deployed on Azure Function Apps and self-managed Linux servers.",
+        "Containerise services with Docker across a multi-project VPS environment, isolating deployments and simplifying rollout.",
+        "Model and maintain PostgreSQL and MySQL schemas — designing migrations, indexing for query performance, and structuring data for multi-organisation access.",
+        "Integrate third-party payment infrastructure, including Paystack subscription billing with server-side key handling and secure checkout flows.",
+        "Build data collection, processing and analytics pipelines to support operational reporting and decision-making.",
+        "Integrate IoT and embedded hardware (STM, Arduino, RFID, GPS/GSM) where products require a physical layer."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "VeriNote",
+      "description": "Medical documentation verification platform that combats medical document fraud by issuing tamper-evident digital notes traceable to verified practitioners.",
+      "entity": "Kosi Connect",
+      "type": "application",
+      "url": "https://verinote.co.za",
+      "roles": [
+        "Co-founder",
+        "Full-Stack Developer"
+      ],
+      "highlights": [
+        "Designed the database schema and the verification model underpinning document integrity.",
+        "Built tiered access and subscription pricing for individual practitioners and practices.",
+        "Authored the POPIA-compliant privacy policy and designed data handling around it — a healthcare product holding sensitive personal information.",
+        "Shipped to both the Apple App Store and Google Play.",
+        "Co-founded and delivered with Nkosingiphile Mdhluli."
+      ],
+      "keywords": [
+        "Healthcare",
+        "POPIA",
+        "Subscriptions",
+        "Access control",
+        "Full-stack"
+      ]
+    },
+    {
+      "name": "Shayile Time",
+      "description": "Workforce attendance, payroll and safety compliance system tracking work hours and machinery inspection data for mining operations.",
+      "entity": "Big Eye Minerals and Energy",
+      "type": "application",
+      "url": "https://shayiletime.co.za",
+      "startDate": "2025",
+      "roles": [
+        "Full-Stack Developer"
+      ],
+      "highlights": [
+        "Implemented RFID-based clock-in/out on Android devices, recording attendance in real time.",
+        "Built a Flutter field application, a PHP/MySQL backend on a Linux server, and a React.js marketing site.",
+        "Structured the data model around organisations, sites, workers and shifts, with role-based access separating supervisors, payroll and management.",
+        "Designed for safety-compliance and labour reporting requirements."
+      ],
+      "keywords": [
+        "RFID",
+        "Compliance",
+        "Payroll",
+        "Role-based access",
+        "Flutter"
+      ]
+    },
+    {
+      "name": "Fleet Tracking Platform",
+      "description": "Vehicle tracking hardware and software platform delivering live location, trip history and speed data to web and mobile clients.",
+      "entity": "Kosi Connect",
+      "type": "application",
+      "roles": [
+        "Full-Stack Developer",
+        "Embedded Developer"
+      ],
+      "highlights": [
+        "Built a vehicle tracking device on an STM microcontroller with GPS and GSM modules.",
+        "Designed the REST API and backend on Azure Function Apps with an Azure PostgreSQL Flexible Server database.",
+        "Delivered web (Angular/TypeScript) and mobile (Flutter) clients consuming the API."
+      ],
+      "keywords": [
+        "PostgreSQL",
+        "Azure",
+        "REST API",
+        "IoT",
+        "Angular"
+      ]
+    },
+    {
+      "name": "GetLocals",
+      "description": "Cross-platform mobile marketplace connecting mining and construction employers to local job seekers by geographic radius and job type.",
+      "entity": "Big Eye Minerals and Energy",
+      "type": "application",
+      "url": "https://getlocals.co.za",
+      "startDate": "2024",
+      "roles": [
+        "Full-Stack Developer"
+      ],
+      "highlights": [
+        "Live on iOS and Android.",
+        "Flutter frontend, PHP Laravel backend, MySQL database.",
+        "Built location-based filtering, account management and job posting modules."
+      ],
+      "keywords": [
+        "Marketplace",
+        "Flutter",
+        "Laravel",
+        "Geolocation"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React.js",
+        "TypeScript",
+        "Angular",
+        "Flutter (Dart)",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Backend",
+      "keywords": [
+        "Python",
+        "Node.js",
+        "PHP (Laravel)",
+        "REST API design",
+        "Azure Function Apps"
+      ]
+    },
+    {
+      "name": "Databases",
+      "keywords": [
+        "PostgreSQL",
+        "Schema design",
+        "Migrations",
+        "Query optimisation",
+        "MySQL",
+        "Firebase"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "keywords": [
+        "Docker",
+        "Azure",
+        "Linux VPS",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "name": "Payments",
+      "keywords": [
+        "Paystack",
+        "Subscription billing",
+        "Card and EFT flows"
+      ]
+    },
+    {
+      "name": "Data & Compliance",
+      "keywords": [
+        "Analytics pipelines",
+        "Machine learning",
+        "POPIA-aligned data handling"
+      ]
+    },
+    {
+      "name": "Embedded & IoT",
+      "keywords": [
+        "STM microcontrollers",
+        "Arduino",
+        "RFID",
+        "GPS/GSM"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Eduvos",
+      "location": "Midrand, South Africa",
+      "area": "Data Science",
+      "studyType": "BSc (Honours)",
+      "startDate": "2026-01"
+    },
+    {
+      "institution": "Eduvos",
+      "location": "Midrand, South Africa",
+      "area": "Biotechnology",
+      "studyType": "BSc",
+      "endDate": "2025-12"
+    }
+  ],
+  "references": [
+    {
+      "name": "Mthokozisi Pini — CEO, Big Eye Minerals and Energy",
+      "reference": "+27 72 920 2867 · mtho@bigeyeminerals.co.za"
+    },
+    {
+      "name": "Nkosingiphile Mdhluli — Director, Kosi Connect",
+      "reference": "+27 73 016 9813 · kay.mdluli@gmail.com"
+    }
+  ]
+}
