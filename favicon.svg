@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- the "RE" box from the nav, letters drawn as strokes so no font is needed -->
+  <rect x="4" y="12" width="52" height="38" fill="#fff" stroke="#15201d" stroke-width="4"/>
+  <g fill="none" stroke="#15201d" stroke-width="4.5" stroke-linejoin="miter">
+    <path d="M17 43V21h8a6 6 0 0 1 0 12h-8M24 33l6 10"/>
+    <path d="M46 21H35v22h11M35 32h9"/>
+  </g>
+  <circle cx="56" cy="50" r="7" fill="#ef5a35"/>
+</svg>
