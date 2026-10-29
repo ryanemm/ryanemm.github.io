@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Résumé helpers — shared by the homepage section and resume.html.
+   Résumé helpers, shared by the homepage section and resume.html.
    Both render from resume.json (JSON Resume schema).
    ------------------------------------------------------------------ */
 window.Resume = (() => {
@@ -15,7 +15,7 @@ window.Resume = (() => {
   }
 
   const range = (start, end) =>
-    start ? `${date(start)} – ${end ? date(end) : 'Present'}` : date(end)
+    start ? `${date(start)} to ${end ? date(end) : 'Present'}` : date(end)
 
   const host = (url) => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')
 

@@ -2,11 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Ryan Tatenda Emason",
-    "label": "Full-Stack Software Engineer — SaaS Platforms, Payments & Data",
+    "label": "Full-Stack Software Engineer: SaaS Platforms, Payments & Data",
     "email": "ryantemason@gmail.com",
-    "phone": "+27 77 371 2759",
+    "phone": "+27 67 493 0181",
+    "otherPhones": [
+      "+263 78 749 6764"
+    ],
     "url": "https://ryanemm.tech",
-    "summary": "Full-stack engineer with 5+ years building and shipping production web and mobile software for regulated, multi-organisation environments. I work across React and TypeScript on the web and Flutter on mobile, with PHP (Laravel), Python and Node.js on the backend and PostgreSQL and MySQL underneath, deploying containerised services with Docker to cloud and self-managed Linux infrastructure. Recent work spans payment gateway integration, subscription and access-control systems, and POPIA-compliant handling of sensitive records. I learn unfamiliar regulated domains quickly - a habit from a biotechnology background and five years building for mining, healthcare and industrial clients.",
+    "summary": "Full-stack engineer with 5+ years building and shipping production web and mobile software for regulated, multi-organisation environments. I work across React and TypeScript on the web and Flutter on mobile, with PHP (Laravel), Python and Node.js on the backend and PostgreSQL and MySQL underneath, deploying containerised services with Docker to cloud and self-managed Linux infrastructure. Recent work spans payment gateway integration, subscription and access-control systems, and POPIA-compliant handling of sensitive records. I learn unfamiliar regulated domains quickly, a habit from a biotechnology background and five years building for mining, healthcare and industrial clients.",
     "location": {
       "city": "eMalahleni",
       "region": "Mpumalanga",
@@ -32,12 +35,12 @@
       "url": "https://kosiconnect.co.za",
       "location": "eMalahleni, South Africa",
       "startDate": "2020-01",
-      "summary": "Design, build and deploy full-stack web and mobile products end to end for clients across mining, healthcare and industrial sectors — owning architecture, delivery and production support.",
+      "summary": "Design, build and deploy full-stack web and mobile products end to end for clients across mining, healthcare and industrial sectors, owning architecture, delivery and production support.",
       "highlights": [
         "Build frontend interfaces in React.js, TypeScript (Angular) and Flutter, with a focus on interfaces non-technical users in the field can operate without training.",
         "Design and build RESTful APIs and backend services in Python, Node.js and PHP, deployed on Azure Function Apps and self-managed Linux servers.",
         "Containerise services with Docker across a multi-project VPS environment, isolating deployments and simplifying rollout.",
-        "Model and maintain PostgreSQL and MySQL schemas — designing migrations, indexing for query performance, and structuring data for multi-organisation access.",
+        "Model and maintain PostgreSQL and MySQL schemas: designing migrations, indexing for query performance, and structuring data for multi-organisation access.",
         "Integrate third-party payment infrastructure, including Paystack subscription billing with server-side key handling and secure checkout flows.",
         "Build data collection, processing and analytics pipelines to support operational reporting and decision-making.",
         "Integrate IoT and embedded hardware (STM, Arduino, RFID, GPS/GSM) where products require a physical layer."
@@ -59,7 +62,7 @@
         "React frontend and Node.js backend, containerised with Docker.",
         "Designed the database schema and the verification model underpinning document integrity.",
         "Built tiered access and subscription pricing for individual practitioners and practices.",
-        "Authored the POPIA-compliant privacy policy and designed data handling around it — a healthcare product holding sensitive personal information.",
+        "Authored the POPIA-compliant privacy policy and designed data handling around it, for a healthcare product holding sensitive personal information.",
         "Shipped to both the Apple App Store and Google Play."
       ],
       "keywords": [
@@ -237,11 +240,11 @@
   ],
   "references": [
     {
-      "name": "Mthokozisi Pini — CEO, Big Eye Minerals and Energy",
+      "name": "Mthokozisi Pini, CEO, Big Eye Minerals and Energy",
       "reference": "+27 72 920 2867 · mtho@bigeyeminerals.co.za"
     },
     {
-      "name": "Nkosingiphile Mdhluli — Director, Kosi Connect",
+      "name": "Nkosingiphile Mdhluli, Director, Kosi Connect",
       "reference": "+27 73 016 9813 · kay.mdluli@gmail.com"
     }
   ]
