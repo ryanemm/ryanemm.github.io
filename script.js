@@ -84,6 +84,82 @@
   const splashing = root.classList.contains('splashing') && !!splash
   const loadFont = (font) => document.fonts.load(font).catch(() => {})
 
+  // turn the splash page over from its bottom-right corner: the corner is pulled up and across to the
+  // left, the fold is the perpendicular bisector between where the corner started and where it is now
+  const peel = (page, after) => {
+    const W = innerWidth
+    const H = innerHeight
+    const lift = Math.min(W, H) * 0.55
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    svg.setAttribute('class', 'page-curl')
+    svg.setAttribute('aria-hidden', 'true')
+    svg.innerHTML =
+      '<defs><linearGradient id="curl-cast" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#15201d" stop-opacity=".3"/><stop offset="1" stop-color="#15201d" stop-opacity="0"/></linearGradient>' +
+      '<linearGradient id="curl-back" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d9ded9"/><stop offset=".2" stop-color="#fbfbf8"/><stop offset="1" stop-color="#eceee9"/></linearGradient>' +
+      '<pattern id="curl-rules" patternUnits="userSpaceOnUse" width="64" height="32"><rect y="31" width="64" height="1" fill="#dce6f0"/></pattern></defs>' +
+      '<polygon fill="url(#curl-cast)"/><polygon fill="url(#curl-back)"/><polygon fill="url(#curl-rules)" opacity=".6"/>'
+    page.after(svg)
+    const [cast, flap, rules] = svg.querySelectorAll('polygon')
+    const rulePattern = svg.querySelector('pattern')
+    const [castGrad, backGrad] = svg.querySelectorAll('linearGradient')
+    const setLine = (g, a, b) => [['x1', a[0]], ['y1', a[1]], ['x2', b[0]], ['y2', b[1]]].forEach(([k, v]) => g.setAttribute(k, v))
+    const pts = (list) => list.map(([x, y]) => `${x},${y}`).join(' ')
+
+    // keep the part of a polygon where side() <= 0
+    const cut = (poly, side) => {
+      const out = []
+      poly.forEach((a, i) => {
+        const b = poly[(i + 1) % poly.length]
+        const da = side(a)
+        const db = side(b)
+        if (da <= 0) out.push(a)
+        if (da * db < 0) out.push([a[0] + ((b[0] - a[0]) * da) / (da - db), a[1] + ((b[1] - a[1]) * da) / (da - db)])
+      })
+      return out
+    }
+    const sheet = [[0, 0], [W, 0], [W, H], [0, H]]
+    const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2)
+    const DURATION = 1400
+    let start
+
+    const frame = (now) => {
+      start ??= now
+      const t = Math.min(1, (now - start) / DURATION)
+      const s = ease(t)
+      const corner = [W - 2 * W * s, H - lift * Math.sin(Math.PI * s)]
+      const dx = W - corner[0]
+      const dy = H - corner[1]
+      const len = Math.hypot(dx, dy)
+      if (len > 0.5) {
+        const n = [dx / len, dy / len]
+        const mid = [(W + corner[0]) / 2, (H + corner[1]) / 2]
+        const side = (p) => (p[0] - mid[0]) * n[0] + (p[1] - mid[1]) * n[1]
+        const kept = cut(sheet, side)
+        const gone = cut(sheet, (p) => -side(p))
+        // the lifted part, mirrored across the fold, is the back of the page
+        const back = gone.map((p) => {
+          const d = 2 * side(p)
+          return [p[0] - d * n[0], p[1] - d * n[1]]
+        })
+        page.style.clipPath = kept.length > 2 ? `polygon(${kept.map(([x, y]) => `${x}px ${y}px`).join(',')})` : 'inset(50%)'
+        flap.setAttribute('points', pts(back))
+        rules.setAttribute('points', pts(back))
+        // the ruled lines show faintly through the back, mirrored across the fold
+        const k = 2 * (mid[0] * n[0] + mid[1] * n[1])
+        rulePattern.setAttribute('patternTransform', `matrix(${1 - 2 * n[0] * n[0]} ${-2 * n[0] * n[1]} ${-2 * n[0] * n[1]} ${1 - 2 * n[1] * n[1]} ${k * n[0]} ${k * n[1]})`)
+        cast.setAttribute('points', pts(gone))
+        setLine(backGrad, mid, [mid[0] - (n[0] * len) / 2, mid[1] - (n[1] * len) / 2])
+        setLine(castGrad, mid, [mid[0] + n[0] * 90, mid[1] + n[1] * 90])
+      }
+      if (t < 1) requestAnimationFrame(frame)
+      else {
+        svg.remove()
+        after()
+      }
+    }
+    requestAnimationFrame(frame)
+  }
+
   const runSplash = (done) => {
     try {
       sessionStorage.setItem('re-splash', '1')
@@ -118,16 +194,11 @@
       finished = true
       clearTimeout(timer)
       skipEvents.forEach((ev) => window.removeEventListener(ev, finish))
-      const shade = document.createElement('div')
-      shade.className = 'turn-shade'
-      splash.after(shade)
-      splash.classList.add('turn')
-      done()
-      setTimeout(() => {
+      peel(splash, () => {
         root.classList.remove('splashing')
         splash.remove()
-        shade.remove()
-      }, 1150)
+      })
+      done()
     }
     skipEvents.forEach((ev) => window.addEventListener(ev, finish, { passive: true }))
 

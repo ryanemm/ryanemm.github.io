@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=18" />
   <script>
     (function () {
       var root = document.documentElement
@@ -45,9 +45,9 @@
     <!-- ============ hero ============ -->
     <section class="hero shell">
       <div>
-        <p class="label label--name" data-reveal><b>Ryan Emason</b> <span>Full&#8209;stack engineer</span></p>
+        <p class="label label--name" data-reveal><b>Ryan Emason</b> <span>Full&#8209;stack engineer & data scientist</span></p>
         <h1 data-type>I build software that works <em><mark>where the work happens.</mark></em></h1>
-        <p class="lede" data-ink style="--delay:.9s">Five-plus years building production software for mining, healthcare and industrial clients — React and TypeScript up front, Python, Node.js and PostgreSQL underneath.</p>
+        <p class="lede" data-ink style="--delay:.9s">Five-plus years building production software for mining, healthcare and industrial clients — React, TypeScript and Flutter up front; PHP, Python, Node.js and PostgreSQL underneath.</p>
         <div class="hero-actions" data-reveal style="--delay:1.4s">
           <a class="btn btn-ink" href="#work">View my work</a>
           <a class="btn btn-line" href="resume.pdf" download="Ryan-Emason-Resume.pdf">Download résumé <span aria-hidden="true">↓</span></a>
@@ -112,7 +112,7 @@
           <p class="desc" data-ink>Fights medical-note fraud by issuing tamper-evident digital notes that trace back to a verified practitioner — handling sensitive records the POPIA-compliant way.</p>
           <dl class="facts-row">
             <div><dt>My role</dt><dd>Co&#8209;founder · Full&#8209;stack</dd></div>
-            <div><dt>Focus</dt><dd>Verification · Subscriptions</dd></div>
+            <div><dt>Built with</dt><dd>React · Node.js · Docker</dd></div>
           </dl>
           <p class="avail">On the web, iOS and Android</p>
           <div class="stores">
@@ -165,13 +165,21 @@
         </div>
       </div>
       <div class="about-copy">
-        <p data-ink>I’m Ryan — a full-stack developer and director at Kosi Connect, building web and mobile products end to end since 2020. I care about the detail that makes software feel considered, from the data model underneath to the screen someone taps in the field.</p>
-        <p data-ink>I pick up unfamiliar, regulated domains quickly — a habit from a biotechnology degree and years of building for mining, healthcare and industrial clients. Now I’m bringing that same curiosity to data science.</p>
-        <div class="toolbox" data-reveal hidden>
-          <span class="tape tape--tr" aria-hidden="true"></span>
-          <p class="label">The toolbox</p>
-          <dl data-skills></dl>
+        <p data-ink>I’m a full-stack developer, building web and mobile products end to end since 2020. I care about the detail that makes software feel considered, from the data model underneath to the screen someone taps in the field.</p>
+        <p data-ink>I pick up unfamiliar, regulated domains quickly, a habit from a biotechnology degree and years of building for mining, healthcare and industrial clients. Now I’m bringing that same curiosity to data science.</p>
+        <div class="interests">
+          <div class="interests-head">
+            <p class="hand" data-write><span>Off the clock</span></p>
+            <svg class="plane-doodle" viewBox="0 0 150 44" aria-hidden="true" data-draw style="--delay:.4s"><path pathLength="1" d="M4 38c34 2 72-6 104-24"/><path pathLength="1" transform="translate(110 13) rotate(-29)" d="M0 0h28M17 0 9-13M17 0l-8 13M4 0 0-6M4 0 0 6"/></svg>
+          </div>
+          <p data-ink>I’m drawn to things that move and the engineering behind them; Formula 1, cars, aircraft, electronics. I photograph planes and can generally identify what’s passing over.</p>
         </div>
+      </div>
+      <div class="toolbox" data-reveal hidden>
+        <span class="tape tape--tl" aria-hidden="true"></span>
+        <span class="tape tape--tr" aria-hidden="true"></span>
+        <p class="label">The toolbox</p>
+        <dl data-skills></dl>
       </div>
     </section>
 
@@ -225,6 +233,6 @@
   </main>
 
   <script src="resume.js?v=3"></script>
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

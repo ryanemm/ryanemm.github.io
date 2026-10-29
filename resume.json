@@ -6,7 +6,7 @@
     "email": "ryantemason@gmail.com",
     "phone": "+27 77 371 2759",
     "url": "https://ryanemm.tech",
-    "summary": "Full-stack engineer with 5+ years building and shipping production software for regulated, multi-organisation environments. I work across React and TypeScript on the frontend, Python and Node.js on the backend, and PostgreSQL underneath, deploying containerised services with Docker to cloud and self-managed Linux infrastructure. Recent work spans payment gateway integration, subscription and access-control systems, and POPIA-compliant handling of sensitive records. I learn unfamiliar regulated domains quickly — a habit from a biotechnology background and five years building for mining, healthcare and industrial clients.",
+    "summary": "Full-stack engineer with 5+ years building and shipping production web and mobile software for regulated, multi-organisation environments. I work across React and TypeScript on the web and Flutter on mobile, with PHP (Laravel), Python and Node.js on the backend and PostgreSQL and MySQL underneath, deploying containerised services with Docker to cloud and self-managed Linux infrastructure. Recent work spans payment gateway integration, subscription and access-control systems, and POPIA-compliant handling of sensitive records. I learn unfamiliar regulated domains quickly - a habit from a biotechnology background and five years building for mining, healthcare and industrial clients.",
     "location": {
       "city": "eMalahleni",
       "region": "Mpumalanga",
@@ -28,7 +28,7 @@
   "work": [
     {
       "name": "Kosi Connect (Pty) Ltd",
-      "position": "Full-Stack Developer / Director",
+      "position": "Full-Stack Developer",
       "url": "https://kosiconnect.co.za",
       "location": "eMalahleni, South Africa",
       "startDate": "2020-01",
@@ -56,18 +56,20 @@
         "Full-Stack Developer"
       ],
       "highlights": [
+        "React frontend and Node.js backend, containerised with Docker.",
         "Designed the database schema and the verification model underpinning document integrity.",
         "Built tiered access and subscription pricing for individual practitioners and practices.",
         "Authored the POPIA-compliant privacy policy and designed data handling around it — a healthcare product holding sensitive personal information.",
-        "Shipped to both the Apple App Store and Google Play.",
-        "Co-founded and delivered with Nkosingiphile Mdhluli."
+        "Shipped to both the Apple App Store and Google Play."
       ],
       "keywords": [
         "Healthcare",
         "POPIA",
         "Subscriptions",
         "Access control",
-        "Full-stack"
+        "React",
+        "Node.js",
+        "Docker"
       ]
     },
     {
@@ -113,7 +115,8 @@
         "Azure",
         "REST API",
         "IoT",
-        "Angular"
+        "Angular",
+        "Flutter"
       ]
     },
     {
@@ -146,18 +149,25 @@
         "React.js",
         "TypeScript",
         "Angular",
-        "Flutter (Dart)",
         "HTML",
         "CSS",
         "JavaScript"
       ]
     },
     {
+      "name": "Mobile",
+      "keywords": [
+        "Flutter (Dart)",
+        "iOS and Android",
+        "App Store and Google Play releases"
+      ]
+    },
+    {
       "name": "Backend",
       "keywords": [
+        "PHP (Laravel)",
         "Python",
         "Node.js",
-        "PHP (Laravel)",
         "REST API design",
         "Azure Function Apps"
       ]
