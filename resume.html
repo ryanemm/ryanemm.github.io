@@ -106,7 +106,7 @@
 <body>
   <div class="toolbar">
     <a class="back" href="./">← ryanemm.tech</a>
-    <a class="btn" href="resume.pdf?v=2" download="Ryan-Emason-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a>
+    <a data-goatcounter-click="resume-download" class="btn" href="resume.pdf?v=3" download="Ryan-Emason-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a>
   </div>
   <main class="sheet" id="resume">
     <span class="tape tape--tl" aria-hidden="true"></span>
@@ -130,7 +130,7 @@
             b.email && link(b.email, `mailto:${b.email}`),
             b.phone && tel(b.phone),
             ...(b.otherPhones || []).map(tel),
-            b.url && link(host(b.url), b.url),
+            b.url && link(b.url.replace(/\/$/, ''), b.url),
             ...(b.profiles || []).map((p) => link(host(p.url), p.url)),
             loc && esc(loc),
           ].filter(Boolean)
@@ -177,5 +177,7 @@
         })
     })()
   </script>
+  <!-- visitor stats: https://ryanemm.goatcounter.com (not counted on localhost) -->
+  <script data-goatcounter="https://ryanemm.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
