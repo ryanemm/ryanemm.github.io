@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400..700&display=swap" rel="stylesheet">
   <style>
     /* same notebook palette as styles.css: white ruled paper, ink, pen blue, orange */
     :root{
@@ -102,11 +102,13 @@
       .item{padding:8px 0}
     }
   </style>
+  <!-- cookie consent; loads Google Analytics only after a yes -->
+  <script src="consent.js?v=1" defer></script>
 </head>
 <body>
   <div class="toolbar">
     <a class="back" href="./">← ryanemm.tech</a>
-    <a data-goatcounter-click="resume-download" class="btn" href="resume.pdf?v=3" download="Ryan-Emason-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a>
+    <a data-goatcounter-click="resume-download" class="btn" href="resume.pdf?v=4" download="Ryan-Emason-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a>
   </div>
   <main class="sheet" id="resume">
     <span class="tape tape--tl" aria-hidden="true"></span>
@@ -121,6 +123,12 @@
       const body = document.getElementById('resume-body')
       const link = (text, url) => (url ? `<a href="${esc(url)}">${esc(text)}</a>` : esc(text))
       const tel = (n) => link(n, `tel:${n.replace(/\s/g, '')}`)
+      // education shows no dates, only "Completing <Month Year>" while a degree is still in progress
+      const completing = (end) => {
+        if (!end || new Date(`${end}-28`) < new Date()) return ''
+        const [y, m] = end.split('-')
+        return `Completing ${new Date(y, m - 1).toLocaleString('en', { month: 'long' })} ${y}`
+      }
       const bullets = (list = []) => (list.length ? `<ul>${list.map((h) => `<li>${esc(h)}</li>`).join('')}</ul>` : '')
 
       load()
@@ -166,7 +174,7 @@
             <h2>Education</h2>
             ${education.map((e) => `
               <section class="item">
-                <div class="row"><h3>${esc(e.studyType)} ${esc(e.area)}</h3><span class="meta">${esc(range(e.startDate, e.endDate))}</span></div>
+                <div class="row"><h3>${esc(e.studyType)} ${esc(e.area)}</h3><span class="meta">${esc(completing(e.endDate))}</span></div>
                 <p class="sub">${esc(e.institution)}${e.location ? ` · ${esc(e.location)}` : ''}</p>
               </section>`).join('')}
 
