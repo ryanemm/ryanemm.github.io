@@ -28,7 +28,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 /* the red double margin line of an exercise book — drawn above the sticky nav so it never breaks */
-body::before,.splash::before{content:"";position:absolute;top:0;bottom:0;left:var(--margin-x);width:5px;border-left:1px solid var(--margin);border-right:1px solid var(--margin);pointer-events:none}
+body::before{content:"";position:absolute;top:0;bottom:0;left:var(--margin-x);width:5px;border-left:1px solid var(--margin);border-right:1px solid var(--margin);pointer-events:none}
 body::before{z-index:55}
 
 img{max-width:100%;height:auto;display:block}
@@ -260,27 +260,6 @@ mark{
 .full-list small{display:block;font:500 12px var(--mono);color:var(--pen);margin-top:2px}
 .timeline-error{color:var(--muted)}
 
-/* ---------- splash: name written, subtitle typed, then the page is turned over ---------- */
-.splash{display:none}
-.splashing .splash{display:grid}
-.splashing body{overflow:hidden}
-.splash{
-  position:fixed;inset:0;z-index:100;place-items:center;padding:0 var(--gutter) 0 var(--gutter-l);cursor:pointer;
-  background-color:var(--paper);
-  background-image:linear-gradient(to bottom,transparent calc(var(--rule-gap) - 1px),var(--rule) calc(var(--rule-gap) - 1px));
-  background-size:100% var(--rule-gap);
-}
-/* the page peels back from its bottom-right corner; script.js draws the fold, the back of the page and its shadow */
-.page-curl{position:fixed;inset:0;z-index:101;width:100%;height:100%;overflow:visible;pointer-events:none;filter:drop-shadow(-6px 8px 14px rgba(21,32,29,.2))}
-.splash-inner{text-align:center;max-width:min(1000px,100%)}
-.splash-name{font:700 clamp(76px,15vw,168px)/1 var(--hand);color:var(--pen)}
-.splash-name .word{display:inline-block;white-space:nowrap}
-.splash-name .sl{display:inline-block;clip-path:inset(-30% 110% -30% -15%)}
-.splash.go .sl{clip-path:inset(-30% -25% -30% -25%);transition:clip-path .17s linear calc(var(--i) * 95ms)}
-.splash .scribble{width:min(320px,70%);height:16px;margin:4px auto 0}
-.splash-sub{font:500 clamp(24px,3.4vw,38px)/1.25 var(--serif);letter-spacing:-.015em;margin-top:22px}
-.splash-hint{position:absolute;bottom:28px;left:0;right:0;text-align:center;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:0;transition:opacity .6s ease 1.5s}
-.splash.go .splash-hint{opacity:1}
 
 /* ---------- contact ---------- */
 .contact{padding:140px 0 40px}

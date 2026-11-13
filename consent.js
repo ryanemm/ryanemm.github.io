@@ -102,23 +102,13 @@
     else if (was === 'granted') { clearCookies(); if (loaded) location.reload() }
   }
 
-  // wait for the homepage splash to finish so the note isn't hidden under it
-  const whenReady = (fn) => {
-    const root = document.documentElement
-    if (!root.classList.contains('splashing')) return setTimeout(fn, 600)
-    const obs = new MutationObserver(() => {
-      if (!root.classList.contains('splashing')) { obs.disconnect(); setTimeout(fn, 900) }
-    })
-    obs.observe(root, { attributes: true, attributeFilter: ['class'] })
-  }
-
   const init = () => {
     document.addEventListener('click', (e) => {
       if (e.target.closest('[data-consent-open]')) { e.preventDefault(); show() }
     })
     const choice = read()
     if (choice === 'granted') startAnalytics()
-    else if (choice !== 'denied') whenReady(show)
+    else if (choice !== 'denied') setTimeout(show, 1200)
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init)

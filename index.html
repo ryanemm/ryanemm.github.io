@@ -11,31 +11,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="styles.css?v=19" />
   <script>
     (function () {
       var root = document.documentElement
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
       root.classList.add('motion')
-      // the splash plays once per browser session
-      try { if (!sessionStorage.getItem('re-splash')) root.classList.add('splashing') } catch (e) {}
       // safety net: if script.js never runs, show everything instead of a blank page
-      setTimeout(function () { if (!window.__motionReady) root.classList.remove('motion', 'splashing') }, 2500)
+      setTimeout(function () { if (!window.__motionReady) root.classList.remove('motion') }, 2500)
     })()
   </script>
   <!-- cookie consent; loads Google Analytics only after a yes -->
-  <script src="consent.js?v=1" defer></script>
+  <script src="consent.js?v=2" defer></script>
 </head>
 <body>
-  <div class="splash" aria-hidden="true">
-    <div class="splash-inner">
-      <p class="splash-name">Ryan Emason</p>
-      <svg class="scribble" viewBox="0 0 240 18" preserveAspectRatio="none"><path pathLength="1" d="M3 11c50-6 110-8 160-5 28 1 52 2 74-2"/></svg>
-      <p class="splash-sub">I build software that works where the work happens.</p>
-    </div>
-    <p class="splash-hint">Tap anywhere to skip</p>
-  </div>
-
   <a class="skip" href="#top">Skip to content</a>
 
   <header class="nav">
@@ -238,7 +227,7 @@
   </main>
 
   <script src="resume.js?v=4"></script>
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
   <!-- visitor stats: https://ryanemm.goatcounter.com (not counted on localhost) -->
   <script data-goatcounter="https://ryanemm.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
